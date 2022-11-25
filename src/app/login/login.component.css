@@ -1,0 +1,25 @@
+.card{
+
+   
+
+    border:none;
+  
+    width: 500px;
+  
+    padding: 40px;
+  
+    margin-top: 40px;
+  
+    margin-left: 300px;
+  
+    top: 60%;
+  
+    left:50%;
+  
+    transform: translate(-50%,-50%);
+  
+    background-color: rgb(228, 212, 35);
+  
+    background: linear-gradient(90deg,rgb(119, 189, 153)0%,rgb(182, 132, 31)100%);
+  
+  }

@@ -1,0 +1,27 @@
+
+<div style="text-align: center;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <h3>Login here!</h3>
+            
+           <label for="email"><i class="fa fa-user" aria-hidden="true"></i><b>User Name :</b></label>
+             <input type="email" name="email" [(ngModel)]="email"placeholder="Enter your user name here"><br/>
+            
+            <label for="password"><i class="fa fa-unlock" aria-hidden="true"></i><b>Password :</b></label> 
+            <input type="password" name="password" [(ngModel)]="password" placeholder="Enter your password here"><br/>
+           
+             
+                      
+                      
+              <br/>
+            <button (click)=checkLogin() class="btn btn-success">Login</button><br/>
+            <a style="color:rgb(65, 78, 225);margin-top: 10px;" routerLink="/add-user">Didn't Register yet? Register here!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  

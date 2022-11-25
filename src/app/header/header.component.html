@@ -1,0 +1,22 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+        <h3>User Application</h3>
+       
+      <ul class="navbar-nav">
+  
+        <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+         <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/add-user" class="nav-link"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a></li>
+         <!-- <a *ngIf="loginService.isUserLoggedIn()" routerLink="/viewall-users" class="nav-link">View All Users</a>  -->
+         <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link"><i class="fa fa-sign-out" aria-hidden="true"></i> LogOut</a></li>
+         <li><a *ngIf="loginService.isUserLoggedIn()&&UserRole" routerLink="/view profile" class="nav-link"><i class="fa fa-sign-out" aria-hidden="true"></i> view profile</a></li>
+      </ul>
+    </div>
+    </nav>
+  
+  </header>
+  
+     
+  
+  
+  

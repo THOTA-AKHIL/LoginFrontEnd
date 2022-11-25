@@ -1,0 +1,86 @@
+<div style="text-align: center;">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6">
+
+<div class="card">
+    <h1>SignUp</h1>
+    
+      <form [formGroup]="form" (ngSubmit)="submit()"> 
+  
+        
+        <!--firstName-->
+         <div class="form-group inputBox">
+          <label>First name:</label>
+          <input formControlName="firstName" id="firstName" type="text" class="form-control" required>
+          <div *ngIf="f.firstName.touched && f.firstName.invalid" class="alert alert-danger">
+            <div *ngIf="f.firstName.errors?.['required']" style="color: red;">First name is required.</div>
+          </div>
+        </div> 
+
+        <!--lastName-->
+        <div class="form-group inputBox">
+            <label>Last name:</label>
+            <input formControlName="lastName" id="lastName" type="text" class="form-control" required>
+            <div *ngIf="f.lastName.touched && f.lastName.invalid" class="alert alert-danger">
+              <div *ngIf="f.lastName.errors?.['required']" style="color: red;">Last name is required.</div>
+            </div>
+          </div> 
+       
+         <!--email-->
+         <div class="form-group inputBox">
+            <label>Email:</label>
+            <input formControlName="email" id="email" type="email" class="form-control" required>
+          
+            <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+              <div *ngIf="f.email.errors?.['required']" style="color: red;"> Email is required.</div>
+              </div>
+            </div> 
+
+         <!--password-->
+            <div class="form-group inputBox">
+                <label>Password:</label>
+                <input formControlName="password" id="password" type="password" class="form-control" required>
+              
+                <div *ngIf="f.password.touched && f.password.invalid" class="alert alert-danger">
+                  <div *ngIf="f.password.errors?.['required']" style="color: red;">Password is required.</div>
+                </div>
+                </div>
+
+        <!--contact no-->
+        <div class="form-group inputBox">
+          <label>Contact No:</label>
+          <input formControlName="contactNo" id="contactNo" type="text" class="form-control" required>
+         
+          <div *ngIf="f.contactNo.touched && f.contactNo.invalid" class="alert alert-danger">
+            <div *ngIf="f.contactNo.errors?.['required']" style="color: red;">ContactNo is max 10 num required.</div>
+          </div>
+        </div>
+
+        <!--User Type-->
+        <div class="form-group">
+          <label>User Type:</label>
+          <select formControlName="userType" id="userType" class="form-control" class="input-select" >
+              <option value="admin">Admin</option>
+              <option value="user">User</option>
+
+            </select>
+            <div *ngIf="f.userType.touched && f.userType.invalid" class="alert alert-danger">
+              <div *ngIf="f.userType.errors?.['required']" style="color: red;">User Type is required.</div>
+              </div>
+            </div>
+            
+        <button class="btn btn-primary" type="submit">Submit</button>&nbsp;
+        <button class="btn btn-primary" type="reset" >Reset</button>
+      
+
+        
+
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
